@@ -56,6 +56,9 @@ static PluginPresetType _pluginPresetGuessType(const CharString presetName) {
   } else if (charStringIsEqualToCString(fileExtension, "fxp", true)) {
     freeCharString(fileExtension);
     return PRESET_TYPE_FXP;
+  } else if (charStringIsEqualToCString(fileExtension, "vital", true)) {
+    freeCharString(fileExtension);
+    return PRESET_TYPE_VITAL;
   } else {
     logCritical("Preset '%s' does not match any supported type",
                 presetName->data);
